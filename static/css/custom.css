@@ -1,0 +1,82 @@
+body {
+    background-color: #eef2f7; /* Light grey background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+}
+
+header h1 {
+    color: #34495e; /* Dark slate blue for text */
+    font-weight: 600;
+}
+
+/* New container style to group the cards */
+.choices-container {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures inner cards conform to the container's border radius */
+    max-width: 450px; /* Control the overall width */
+    margin: 50px auto; /* Center the container */
+}
+
+.choice-card {
+    flex: 1; /* Make each card take up equal space */
+    padding: 25px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-right: 1px solid #eef2f7; /* Separator line */
+}
+
+.choice-card:last-child {
+    border-right: none; /* Remove separator from the last card */
+}
+
+.choice-card:hover {
+    background-color: #f8f9fa; /* Subtle hover effect */
+}
+
+.choice-card.selected {
+    background-color: #dde8f5; /* Blueish background for selected choice */
+}
+
+.choice-card .icon {
+    font-size: 4rem; /* Icon size */
+    color: #34495e; /* Dark slate blue icon color */
+}
+
+/* Scoreboard Styling */
+#scoreboard .card {
+    background: none;
+    border: none;
+}
+#scoreboard .card-header {
+    background: none;
+    border: none;
+    color: #7f8c8d;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-bottom: 0;
+}
+#scoreboard .card-body h2 {
+    color: #2c3e50;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+/* Result Display */
+#result-display { min-height: 80px; }
+#result-message { font-size: 2em; font-weight: bold; }
+#result-message.win { color: #2ecc71; }
+#result-message.lose { color: #e74c3c; }
+#result-message.tie { color: #f39c12; }
+#result-details { font-size: 1.2em; color: #7f8c8d; }
+#reset-btn { border-radius: 50px; font-weight: 500; }
